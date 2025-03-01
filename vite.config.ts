@@ -9,28 +9,48 @@ export default defineConfig({
 		outdir: './src/paraglide',
 		strategy: ['url', 'baseLocale'],
 		urlPatterns: [
-
 			{
 				pattern: ":protocol://:domain(.*)::port?/:locale(kurdish|english|arabic)?/:about?/:path(.*)?",
 				deLocalizedNamedGroups: {
-					locale: null,
-					about: 'about'
+					'locale': null,
+					'about?': 'about'
 				},
 				localizedNamedGroups: {
-					en: {
-						locale: 'english',
-						about: "about"
-					},
 					ckb: {
-						locale: 'kurdish',
-						about: "darbara"
+						'locale': 'kurdish',
+						'about?': 'darbara'
+					},
+					en: {
+						'locale': 'english',
+						'about?': 'about'
 					},
 					ar: {
-						locale: 'arabic',
+						'locale': 'arabic',
 						about: null
 					}
 				},
 			},
+			{
+                pattern: ":protocol://:domain(.*)::port?/:locale(kurdish|english|arabic)?/:policy?/:path(.*)?",
+                deLocalizedNamedGroups: {
+                    'locale': null,
+                    'policy?': 'policy',
+                },
+                localizedNamedGroups: {
+                    ckb: {
+                        'locale': 'kurdish',
+                        'policy?': 'syasat',
+                    },
+                    en: {
+                        'locale': 'english',
+                        'policy?': 'about',
+                    },
+                    ar: {
+                        'locale': 'arabic',
+                        'policy?': 'syasat'
+                    }
+                },
+            },
 		]
 	}
 	), sveltekit(), tailwindcss()]

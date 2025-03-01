@@ -15,8 +15,8 @@ importers:
         specifier: ^9.18.0
         version: 9.21.0
       '@inlang/paraglide-js':
-        specifier: 2.0.0-beta.24
-        version: 2.0.0-beta.24
+        specifier: 2.0.0-beta.25
+        version: 2.0.0-beta.25
       '@sveltejs/adapter-vercel':
         specifier: ^5.5.2
         version: 5.6.3(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.0(jiti@2.4.2)(lightningcss@1.29.1)))(svelte@5.20.5)(vite@6.2.0(jiti@2.4.2)(lightningcss@1.29.1)))(rollup@4.34.8)
@@ -438,15 +438,15 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@inlang/paraglide-js@2.0.0-beta.24':
-    resolution: {integrity: sha512-IMAvjjpDe531UhgeMYbMr1fcel4MTASlkVzQzqD4kO1xz/zvsFmr6vhS/mT9iunYJWNnKSvfkEDhW2AeJUlRSA==}
+  '@inlang/paraglide-js@2.0.0-beta.25':
+    resolution: {integrity: sha512-9KkcFLr5YeaUkyeT0GpWmoH85ChBsxdmSChSxn4Z5B+mbaTfZVoWf3Cz00BMybiNxGmBTCdyOhV/I3qSF2HdNA==}
     hasBin: true
 
   '@inlang/recommend-sherlock@0.2.1':
     resolution: {integrity: sha512-ckv8HvHy/iTqaVAEKrr+gnl+p3XFNwe5D2+6w6wJk2ORV2XkcRkKOJ/XsTUJbPSiyi4PI+p+T3bqbmNx/rDUlg==}
 
-  '@inlang/sdk@2.4.0':
-    resolution: {integrity: sha512-x6t0I91O9O7NgLwEFXcWrZEYrQNb/E1OvHxWW2IU7hffdqBmZAeVjFEUZA/XuOZrbrEHgJDUJcnR3cDaaKlBQA==}
+  '@inlang/sdk@2.4.1':
+    resolution: {integrity: sha512-JKsbFs/z2rv/2vPR6ZWDC3PWLX9COQPRYADNlbFl2omqkM2Dl5g7X/jIPDkTV85NccOimSf6Y/d1zqK5p5K4zA==}
     engines: {node: '>=18.0.0'}
 
   '@isaacs/cliui@8.0.2':
@@ -2024,10 +2024,10 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@inlang/paraglide-js@2.0.0-beta.24':
+  '@inlang/paraglide-js@2.0.0-beta.25':
     dependencies:
       '@inlang/recommend-sherlock': 0.2.1
-      '@inlang/sdk': 2.4.0
+      '@inlang/sdk': 2.4.1
       commander: 11.1.0
       consola: 3.4.0
       json5: 2.2.3
@@ -2040,7 +2040,7 @@ snapshots:
     dependencies:
       comment-json: 4.2.5
 
-  '@inlang/sdk@2.4.0':
+  '@inlang/sdk@2.4.1':
     dependencies:
       '@lix-js/sdk': 0.4.1
       '@sinclair/typebox': 0.31.28
