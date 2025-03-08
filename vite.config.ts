@@ -7,10 +7,10 @@ export default defineConfig({
 	plugins: [paraglideVitePlugin({
 		project: './project.inlang',
 		outdir: './src/paraglide',
-		strategy: ['url', 'baseLocale'],
+		strategy: ['url', "baseLocale"],
 		urlPatterns: [
 			{
-				pattern: ":protocol://:domain(.*)::port?/:locale(kurdish|english|arabic)?/:about?/:path(.*)?",
+				pattern: ":protocol://:domain(.*)::port?/:locale(kurdish|english|arabic)?/:about(about|darbara)?/:path(.*)?",
 				deLocalizedNamedGroups: {
 					'locale': null,
 					'about?': 'about'
@@ -55,3 +55,19 @@ export default defineConfig({
 	}
 	), sveltekit(), tailwindcss()]
 });
+
+
+// .
+// └── routes
+//     ├── [postId] // //no need path transaltion
+//     │   ├── +page.svelte
+//     │   └── +page.ts
+//     ├── some-page // path transalted and optional path 
+//     │   ├── +page.svelte
+//     │   └── +page.ts
+//     ├── another-page //no need path transaltion
+//     │   ├── +page.svelte
+//     │   └── +page.ts
+//     ├── +page.svelte
+//     ├── +page.ts
+//     └── +layout.svelte
