@@ -15,8 +15,8 @@ importers:
         specifier: ^9.18.0
         version: 9.21.0
       '@inlang/paraglide-js':
-        specifier: 2.0.0-beta.24
-        version: 2.0.0-beta.24
+        specifier: 2.0.0-beta.27
+        version: 2.0.0-beta.27
       '@sveltejs/adapter-vercel':
         specifier: ^5.5.2
         version: 5.6.3(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.0(jiti@2.4.2)(lightningcss@1.29.1)))(svelte@5.20.5)(vite@6.2.0(jiti@2.4.2)(lightningcss@1.29.1)))(rollup@4.34.8)
@@ -438,8 +438,8 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@inlang/paraglide-js@2.0.0-beta.24':
-    resolution: {integrity: sha512-IMAvjjpDe531UhgeMYbMr1fcel4MTASlkVzQzqD4kO1xz/zvsFmr6vhS/mT9iunYJWNnKSvfkEDhW2AeJUlRSA==}
+  '@inlang/paraglide-js@2.0.0-beta.27':
+    resolution: {integrity: sha512-+mU6t4BvCPXTJe0hC0y5MNi6yCtGem0fjKKRFngSK6khetSnsGl0F0tiytpBLTZyIMyXNoAIVQ3VecCmVhIUeQ==}
     hasBin: true
 
   '@inlang/recommend-sherlock@0.2.1':
@@ -2029,7 +2029,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@inlang/paraglide-js@2.0.0-beta.24':
+  '@inlang/paraglide-js@2.0.0-beta.27':
     dependencies:
       '@inlang/recommend-sherlock': 0.2.1
       '@inlang/sdk': 2.4.1
