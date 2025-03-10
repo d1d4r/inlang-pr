@@ -1,68 +1,53 @@
-import { paraglideVitePlugin } from '@inlang/paraglide-js'
+import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [paraglideVitePlugin({
-		project: './project.inlang',
-		outdir: './src/paraglide',
-		strategy: ['url', "baseLocale"],
-		urlPatterns: [
-			{
-				pattern: ":protocol://:domain(.*)::port?/:locale(kurdish|english|arabic)?/:about(about|darbara)?/:path(.*)?",
-				deLocalizedNamedGroups: {
-					'locale': null,
-					'about?': 'about'
+	plugins: [
+		paraglideVitePlugin({
+			project: './project.inlang',
+			outdir: './src/paraglide',
+			strategy: ['url'],
+			urlPatterns: [
+				{
+					pattern: '/about',
+					localized: [
+						['ckb', '/kurdish/darbara'],
+						['en', '/english/about'],
+						['ar', '/about']
+					]
 				},
-				localizedNamedGroups: {
-					ckb: {
-						'locale': 'kurdish',
-						'about?': 'darbara'
-					},
-					en: {
-						'locale': 'english',
-						'about?': 'about'
-					},
-					ar: {
-						'locale': 'arabic',
-						about: null
-					}
+				{
+					pattern: '/policy',
+					localized: [
+						['ckb', '/kurdish/syasat'],
+						['en', '/english/about'],
+						['ar', '/arabic/syasat']
+					]
 				},
-			},
-			{
-                pattern: ":protocol://:domain(.*)::port?/:locale(kurdish|english|arabic)?/:policy?/:path(.*)?",
-                deLocalizedNamedGroups: {
-                    'locale': null,
-                    'policy?': 'policy',
-                },
-                localizedNamedGroups: {
-                    ckb: {
-                        'locale': 'kurdish',
-                        'policy?': 'syasat',
-                    },
-                    en: {
-                        'locale': 'english',
-                        'policy?': 'about',
-                    },
-                    ar: {
-                        'locale': 'arabic',
-                        'policy?': 'syasat'
-                    }
-                },
-            },
-		]
-	}
-	), sveltekit(), tailwindcss()]
+				// Wildcard fallback for other paths
+				{
+					pattern: '/:path(.*)?',
+					localized: [
+						['ckb', '/kurdish/:path(.*)?'],
+						['en', '/english/:path(.*)?'],
+						['ar', '/arabic/:path(.*)?']
+					]
+				}
+			]
+		}),
+		sveltekit(),
+		tailwindcss()
+	]
 });
-
 
 // .
 // └── routes
 //     ├── [postId] // //no need path transaltion
 //     │   ├── +page.svelte
 //     │   └── +page.ts
-//     ├── some-page // path transalted and optional path 
+//     ├── some-page // path transalted and optional path
 //     │   ├── +page.svelte
 //     │   └── +page.ts
 //     ├── another-page //no need path transaltion
