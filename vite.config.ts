@@ -8,22 +8,30 @@ export default defineConfig({
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/paraglide',
-			strategy: ['url'],
+			strategy: ['url', 'baseLocale'],
 			urlPatterns: [
 				{
 					pattern: '/about',
 					localized: [
 						['ckb', '/kurdish/darbara'],
 						['en', '/english/about'],
-						['ar', '/about']
+						['ar', '/arabic/darbara']
 					]
 				},
 				{
 					pattern: '/policy',
 					localized: [
 						['ckb', '/kurdish/syasat'],
-						['en', '/english/about'],
+						['en', '/english/policy'],
 						['ar', '/arabic/syasat']
+					]
+				},
+				{
+					pattern: '/specific-route',
+					localized: [
+						['ckb', '/kurdish/specific-route'],
+						['en', '/english'], // No need to translate
+						['ar', '/arabic'] // No need to translate
 					]
 				},
 				// Wildcard fallback for other paths

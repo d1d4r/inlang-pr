@@ -3,8 +3,8 @@
 	let { children } = $props();
 
 	import { getLocale, localizeHref, setLocale } from '../paraglide/runtime';
-	console.log("🚀 ~ getLocale: +layout.svelte", getLocale())
-	console.log("====================================");
+	// console.log("🚀 ~ getLocale: +layout.svelte", getLocale())
+	// console.log("====================================");
 </script>
 
 <main>
@@ -26,6 +26,7 @@
 		<a class="border px-2 py-1" href={localizeHref('/policy')}>policy</a>
 		<a class="border px-2 py-1" href={localizeHref('/123')}>dynamic</a>
 		<a class="border px-2 py-1" href={localizeHref('/store')}>store</a>
+		<a class="border px-2 py-1" href={localizeHref('/specific-route')}>specific-route</a>
 	</div>
 	<p>{getLocale()}</p>
 	{@render children()}

@@ -6,9 +6,9 @@ export const handle: Handle = ({ event, resolve }) => {
 	return paraglideMiddleware(
 		event.request,
 		({ request, locale }) => {
-			console.log('====================================');
-			console.log('hooks.server.ts locale', locale);
-			console.log('hooks.server.ts getLocale()', getLocale());
+			// console.log('====================================');
+			// console.log('hooks.server.ts locale', locale);
+			// console.log('hooks.server.ts getLocale()', getLocale());
 			return resolve(
 				{ ...event, request },
 				{
