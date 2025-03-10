@@ -3,6 +3,8 @@
 	let { children } = $props();
 
 	import { getLocale, localizeHref, setLocale } from '../paraglide/runtime';
+	console.log("🚀 ~ getLocale: +layout.svelte", getLocale())
+	console.log("====================================");
 </script>
 
 <main>
