@@ -11,8 +11,8 @@
 	<div class="space-y-4">
 		<!-- <a class="mt-5 border px-2 py-1" href="/kurdish" data-sveltekit-reload>ckb</a>
 		<a class="mt-5 border px-2 py-1" href="/arabic" data-sveltekit-reload>ar</a>
-		<a class="mt-5 border px-2 py-1" href="/english" data-sveltekit-reload>en</a> -->
-		<!-- <span>href</span>
+		<a class="mt-5 border px-2 py-1" href="/english" data-sveltekit-reload>en</a>
+		<span>href</span>
 		<br />
 		<span>button</span> -->
 		<button class="border px-2 py-1" onclick={() => setLocale('ckb')}>ckb</button>

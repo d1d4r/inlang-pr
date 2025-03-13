@@ -11,6 +11,16 @@ export default defineConfig({
 			strategy: ['url', 'baseLocale'],
 			urlPatterns: [
 				{
+					pattern: '/404',
+					localized: [
+						['ckb', '/kurdish/404'],
+						['en', '/english/404'],
+						['ar', '/arabic/404'],
+						['en', '/english/specific-route'],
+						['ar', '/arabic/specific-route'],
+					]
+				},
+				{
 					pattern: '/about',
 					localized: [
 						['ckb', '/kurdish/darbara'],
@@ -30,8 +40,8 @@ export default defineConfig({
 					pattern: '/specific-route',
 					localized: [
 						['ckb', '/kurdish/specific-route'],
-						['en', '/english'], // No need to translate
-						['ar', '/arabic'] // No need to translate
+						['en', '/english/404'], // No need to translate
+						['ar', '/arabic/404'] // No need to translate
 					]
 				},
 				// Wildcard fallback for other paths
