@@ -1,0 +1,29 @@
+{
+    "redirects": [
+        {
+            "source": "/(kurdish|english|arabic|persian|turkce|kurmanci)/(\\d+)",
+            "destination": "/$1/news/$2",
+            "permanent": true
+          }
+    ],
+    "headers": [
+        {
+          "source": "/.well-known/apple-app-site-association",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        {
+          "source": "/.well-known/assetlinks.json",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      ]
+}
