@@ -1,5 +1,4 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "greeting": "Hello world from english",
-  "about": "About"
+  "greeting": "Hello world from english"
 }

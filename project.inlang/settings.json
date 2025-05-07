@@ -1,10 +1,13 @@
 {
   "$schema": "https://inlang.com/schema/project-settings",
   "baseLocale": "ckb",
-  "locales": [
+ "locales": [
     "ckb",
     "en",
-    "ar"
+    "kr",
+    "ar",
+    "fa",
+    "tr"
   ],
   "modules": [
     "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js",
