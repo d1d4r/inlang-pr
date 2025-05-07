@@ -9,6 +9,7 @@ export default defineConfig({
 			project: './project.inlang',
 			outdir: './src/paraglide',
 			strategy: ['url', 'baseLocale'],
+			disableAsyncLocalStorage: true,
 			urlPatterns: [
 				{
 					pattern: '/404',
@@ -17,7 +18,7 @@ export default defineConfig({
 						['en', '/english/404'],
 						['ar', '/arabic/404'],
 						['en', '/english/specific-route'],
-						['ar', '/arabic/specific-route'],
+						['ar', '/arabic/specific-route']
 					]
 				},
 				{
@@ -59,18 +60,3 @@ export default defineConfig({
 		tailwindcss()
 	]
 });
-
-// .
-// └── routes
-//     ├── [postId] // //no need path transaltion
-//     │   ├── +page.svelte
-//     │   └── +page.ts
-//     ├── some-page // path transalted and optional path
-//     │   ├── +page.svelte
-//     │   └── +page.ts
-//     ├── another-page //no need path transaltion
-//     │   ├── +page.svelte
-//     │   └── +page.ts
-//     ├── +page.svelte
-//     ├── +page.ts
-//     └── +layout.svelte
