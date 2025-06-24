@@ -26,4 +26,4 @@ const preloadHandle: Handle = async ({ event, resolve }) => {
 	});
 };
 
-export const handle: Handle = sequence(preloadHandle, paraglideHandle);
+export const handle: Handle = sequence(preloadHandle);
