@@ -3,5 +3,5 @@
 	let { children } = $props();
 </script>
 
-<p>layout route random {Math.random()}</p>
+<!-- <p>layout route random {Math.random()}</p> -->
 <main>{@render children()}</main>

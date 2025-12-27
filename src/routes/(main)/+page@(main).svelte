@@ -11,7 +11,8 @@
 	setTodotate('$_todo_state_2');
 </script>
 
-<p>main page route random {data.random}</p>
+<p>main page route random {Math.random()}</p>
+<p>main page route random data {data.random}</p>
 <p>main page date {new Date()}</p>
 <p>{m.greeting()}</p>
 

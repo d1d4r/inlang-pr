@@ -1,8 +1,8 @@
-
 /** @type {import('@sveltejs/adapter-vercel').Config} */
 export const config = {
+	runtime: 'nodejs', // Required for ISR
 	isr: {
-		expiration: 60,
-		bypassToken: 'didardidardidardidardidardidardidar',
+		expiration: false,
+		bypassToken: 'didardidardidardidardidardidardidar'
 	}
 };

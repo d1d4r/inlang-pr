@@ -18,6 +18,7 @@ class TodoState implements ITodoState {
 	newTodo: string = $state('');
 
 	todos: Todo[] = $state([]);
+	
 	handleNewTodo = () => {
 		this.todos.push({
 			name: this.newTodo,
